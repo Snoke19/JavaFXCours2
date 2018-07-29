@@ -1,0 +1,62 @@
+            /*Add*/
+.myButtonAdd {
+    -fx-border-color: #43A047;
+}
+
+.myButtonAdd {
+    -fx-background-color:transparent;
+}
+
+.myButtonAdd:hover {
+    -fx-background-color: #66BB6A;
+}
+
+            /*Edit*/
+.myButtonEdit {
+    -fx-border-color: #FFB300;
+}
+
+.myButtonEdit {
+    -fx-background-color:transparent;
+}
+
+.myButtonEdit:hover {
+    -fx-background-color: #FFCA28;
+}
+
+            /*Delete*/
+.myButtonDelete {
+    -fx-border-color: #E53935;
+}
+
+.myButtonDelete {
+    -fx-background-color:transparent;
+}
+
+.myButtonDelete:hover {
+    -fx-background-color: #EF5350;
+}
+
+            /*DeleteAddUser*/
+.myButtonDeleteAddUser {
+    -fx-border-color: #E57373;
+}
+
+.myButtonDeleteAddUser {
+    -fx-background-color:transparent;
+}
+
+.myButtonDeleteAddUser:hover {
+    -fx-background-color: #EF9A9A;
+}
+
+.muButtonClearSearch {
+    -fx-border-color: #E57373;
+}
+.muButtonClearSearch {
+    -fx-background-color:transparent;
+}
+
+.muButtonClearSearch:hover {
+    -fx-background-color: #EF9A9A;
+}

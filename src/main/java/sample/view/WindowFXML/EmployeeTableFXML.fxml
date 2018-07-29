@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1225.0" style="-fx-background-color: #607D8B;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.WindowCode.EmployeeTable">
+   <children>
+      <TableView fx:id="tableEmployee" layoutY="65.0" prefHeight="595.0" prefWidth="929.0" style="-fx-background-color: #EEEEEE;" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="295.0" AnchorPane.topAnchor="65.0">
+        <columns>
+          <TableColumn fx:id="columnIdEmployee" prefWidth="70.0" text="Номер" />
+          <TableColumn fx:id="columnAllNameEmployee" prefWidth="126.0" text="Працівник ПІБ" />
+            <TableColumn fx:id="columnPostEmployee" prefWidth="110.0" text="Посада" />
+            <TableColumn fx:id="columnLiabilityEmployee" prefWidth="194.0" text="Матеріальна відповідальність" />
+            <TableColumn fx:id="columnNumberPhoneEmployee" prefWidth="119.0" text="Телефонний номер" />
+            <TableColumn fx:id="columnEnterpriseEmployee" prefWidth="137.0" text="Компанія" />
+            <TableColumn fx:id="columnTechniqueEmployee" prefWidth="161.0" text="Техніка" />
+        </columns>
+      </TableView>
+      <Pane layoutX="935.0" layoutY="65.0" prefHeight="595.0" prefWidth="290.0" style="-fx-background-color: #EEEEEE;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <TextField fx:id="textFieldAllNameEmployee" layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="260.0" promptText="Працівник ПІБ" styleClass="inputSection" stylesheets="@../../resource/WindowFXMLCSS/TextField.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Button alignment="CENTER" layoutX="14.0" layoutY="541.0" mnemonicParsing="false" onAction="#deleteDataInEmployee" prefHeight="40.0" prefWidth="260.0" styleClass="myButtonDelete" stylesheets="@../../resource/WindowFXMLCSS/hover.css" text="Видалити">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" layoutX="14.0" layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="260.0" styleClass="myButtonEdit" stylesheets="@../../resource/WindowFXMLCSS/hover.css" text="Редагувати">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="addButtonEmployee" alignment="CENTER" layoutX="14.0" layoutY="304.0" mnemonicParsing="false" onAction="#addDataInTableEmployee" prefHeight="40.0" prefWidth="260.0" styleClass="myButtonAdd" stylesheets="@../../resource/WindowFXMLCSS/hover.css" text="Додати">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <TextField fx:id="textFieldPostEmployee" layoutX="14.0" layoutY="64.0" prefHeight="40.0" prefWidth="260.0" promptText="Посада" styleClass="inputSection" stylesheets="@../../resource/WindowFXMLCSS/TextField.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="textFieldNumberPhoneEmployee" layoutX="14.0" layoutY="147.0" prefHeight="40.0" prefWidth="260.0" promptText="Телефонний номер" styleClass="inputSection" stylesheets="@../../resource/WindowFXMLCSS/TextField.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <ComboBox fx:id="comboBoxAllNameEnterprise" layoutX="14.0" layoutY="197.0" opacity="0.47" prefHeight="40.0" prefWidth="260.0" promptText="Копанія" styleClass="inputSection" stylesheets="@../../resource/WindowFXMLCSS/TextField.css" />
+            <ComboBox fx:id="comboBoxAllNameTechnique" layoutX="14.0" layoutY="250.0" opacity="0.47" prefHeight="40.0" prefWidth="260.0" promptText="Техніка" styleClass="inputSection" stylesheets="@../../resource/WindowFXMLCSS/TextField.css" />
+            <CheckBox fx:id="checkBoxLiability" layoutX="14.0" layoutY="115.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="260.0" text="Матеріальна відповідальність">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <Button alignment="CENTER_RIGHT" layoutX="14.0" layoutY="359.0" mnemonicParsing="false" onAction="#importDataEnterpriseExcel" prefHeight="40.0" prefWidth="84.0" styleClass="myButtonAdd" stylesheets="@../../resource/WindowFXMLCSS/hover.css" text="Excel">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="20.0" layoutY="363.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resource/image/MSExcel.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <AnchorPane prefHeight="60.0" prefWidth="1225.0" style="-fx-background-color: #EEEEEE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="935.0" layoutY="6.0" prefHeight="50.0" prefWidth="290.0" style="-fx-background-color: #CFD8DC;" text="Працівники" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldForSearchEmployee" layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="270.0" promptText="Пошук" style="-fx-background-color: white;" styleClass="inputSection" stylesheets="@../../resource/WindowFXMLCSS/TextField.css">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <Button layoutX="254.0" layoutY="18.0" mnemonicParsing="false" onAction="#clearSearchButtonEmployee" prefHeight="10.0" prefWidth="10.0" styleClass="muButtonClearSearch" stylesheets="@../../resource/WindowFXMLCSS/hover.css" text="X" />
+            <ComboBox fx:id="stringComboBoxForSearch" layoutX="287.0" layoutY="14.0" opacity="0.45" prefHeight="35.0" prefWidth="134.0" promptText="Критерії пошуку" styleClass="inputSection" stylesheets="@../../resource/WindowFXMLCSS/TextField.css" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

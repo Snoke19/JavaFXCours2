@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - @localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="drunkirishman">
+      <Current>1</Current>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="online-shop"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="sakila"/>
+    <schema id="8" parent="1" name="sys"/>
+    <schema id="9" parent="1" name="test"/>
+    <schema id="10" parent="1" name="world"/>
+    <schema id="11" parent="1" name="computers">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <table id="12" parent="11" name="employee"/>
+    <table id="13" parent="11" name="enterprise"/>
+    <table id="14" parent="11" name="technique"/>
+    <column id="15" parent="12" name="idEmployee">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="16" parent="12" name="name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="17" parent="12" name="middle_name">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="18" parent="12" name="last_name">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="19" parent="12" name="post">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="20" parent="12" name="liability">
+      <Position>6</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <column id="21" parent="12" name="number_phone">
+      <Position>7</Position>
+      <DataType>int(12)|0</DataType>
+    </column>
+    <column id="22" parent="12" name="technique_idTechnique">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="12" name="enterprise_idEnterprise">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="24" parent="12" name="fk_employee_ technique1_idx">
+      <ColNames>technique_idTechnique</ColNames>
+    </index>
+    <index id="25" parent="12" name="fk_employee_enterprise1_idx">
+      <ColNames>enterprise_idEnterprise</ColNames>
+    </index>
+    <key id="26" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idEmployee</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="27" parent="12" name="fk_employee_ technique1">
+      <ColNames>technique_idTechnique</ColNames>
+      <RefSchemaName>computers</RefSchemaName>
+      <RefTableName>technique</RefTableName>
+      <RefColNames>idTechnique</RefColNames>
+    </foreign-key>
+    <foreign-key id="28" parent="12" name="fk_employee_enterprise1">
+      <ColNames>enterprise_idEnterprise</ColNames>
+      <RefSchemaName>computers</RefSchemaName>
+      <RefTableName>enterprise</RefTableName>
+      <RefColNames>idEnterprise</RefColNames>
+    </foreign-key>
+    <column id="29" parent="13" name="idEnterprise">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="13" name="name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="31" parent="13" name="city">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="32" parent="13" name="address">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="33" parent="13" name="name_director">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="34" parent="13" name="middle_name_director">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="35" parent="13" name="last_name_director">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="36" parent="13" name="name_accountant">
+      <Position>8</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="37" parent="13" name="middle_name_accountant">
+      <Position>9</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="38" parent="13" name="last_name_accountant">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="39" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idEnterprise</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="40" parent="14" name="idTechnique">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="14" name="type">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="42" parent="14" name="name_tech">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="43" parent="14" name="inventory_numbers">
+      <Position>4</Position>
+      <DataType>int(15)|0</DataType>
+    </column>
+    <column id="44" parent="14" name="start_cost">
+      <Position>5</Position>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <column id="45" parent="14" name="actual_cost">
+      <Position>6</Position>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <key id="46" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idTechnique</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

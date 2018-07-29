@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="1007.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.WindowCode.MainWindow">
+   <children>
+      <AnchorPane layoutY="530.0" prefHeight="70.0" prefWidth="1007.0" style="-fx-background-color: #CFD8DC;" stylesheets="@../../resource/WindowFXMLCSS/TextField.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <HBox prefHeight="70.0" prefWidth="327.0" spacing="10.0">
+               <children>
+                  <Button minHeight="0.0" mnemonicParsing="false" onAction="#goToEmployee" prefHeight="50.0" prefWidth="100.0" styleClass="myButtonAdd" stylesheets="@../../resource/WindowFXMLCSS/hover.css" text="Працівник" />
+                  <Button mnemonicParsing="false" onAction="#goToTechnique" prefHeight="50.0" prefWidth="100.0" styleClass="myButtonAdd" stylesheets="@../../resource/WindowFXMLCSS/hover.css" text="Техніка" />
+                  <Button mnemonicParsing="false" onAction="#goToEnterprise" prefHeight="50.0" prefWidth="100.0" styleClass="myButtonAdd" stylesheets="@../../resource/WindowFXMLCSS/hover.css" text="Підприємство" />
+               </children>
+               <padding>
+                  <Insets left="5.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <Label fx:id="labelForNumberEmployee" layoutX="370.0" layoutY="86.0" prefHeight="35.0" prefWidth="265.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelForAllNameEmployee" layoutX="370.0" layoutY="141.0" prefHeight="35.0" prefWidth="265.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelForNameTechnique" layoutX="370.0" layoutY="194.0" prefHeight="35.0" prefWidth="265.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="220.0" layoutY="83.0" prefHeight="40.0" prefWidth="141.0" text="Номер:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="220.0" layoutY="138.0" prefHeight="40.0" prefWidth="141.0" text="Працівник ПІБ:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="220.0" layoutY="191.0" prefHeight="40.0" prefWidth="141.0" text="Техніка:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Pane prefHeight="50.0" prefWidth="1007.0" style="-fx-background-color: #CFD8DC;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="labelForInformationEnterprise" alignment="CENTER_RIGHT" layoutX="543.0" layoutY="5.0" prefHeight="40.0" prefWidth="450.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="enterpriseComboBox" layoutY="10.0" onAction="#setEnterpriseComboBox" opacity="0.7" prefHeight="40.0" prefWidth="210.0" promptText="Філіали" styleClass="inputSection" stylesheets="@../../resource/WindowFXMLCSS/TextField.css" />
+         </children>
+      </Pane>
+      <Label alignment="CENTER_RIGHT" layoutX="220.0" layoutY="244.0" prefHeight="40.0" prefWidth="141.0" text="Посада:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="220.0" layoutY="299.0" prefHeight="40.0" prefWidth="141.0" text="Телефонний номер:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="220.0" layoutY="353.0" prefHeight="40.0" prefWidth="210.0" text="Матеріальна відповідальність:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelForPost" layoutX="371.0" layoutY="247.0" prefHeight="35.0" prefWidth="265.0">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="labelForNumberPhone" layoutX="371.0" layoutY="302.0" prefHeight="35.0" prefWidth="265.0">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="labelForLiability" layoutX="435.0" layoutY="356.0" prefHeight="35.0" prefWidth="200.0">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <ListView fx:id="employeeListView" layoutY="49.0" onMouseClicked="#viewEmployeeInformation" prefHeight="482.0" prefWidth="210.0" styleClass="inputSection" stylesheets="@../../resource/WindowFXMLCSS/TextField.css" />
+   </children>
+</AnchorPane>
