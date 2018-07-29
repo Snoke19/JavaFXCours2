@@ -14,8 +14,6 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-        FXRouter.bind(this, primaryStage, );
-
         Parent root = FXMLLoader.load(Main.class.getResource("view/WindowFXML/MainWindowFXML.fxml"));
         primaryStage.setTitle("Облік комп'ютерної техніки");
         primaryStage.setScene(new Scene(root));
