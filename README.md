@@ -1,4 +1,4 @@
-# JavaFXCours2
+# Audit of computer equipment
 
 The program for working with the information on accounting of computer equipment at the enterprise is developed. 
   The program should allow you to work with the following information: 
